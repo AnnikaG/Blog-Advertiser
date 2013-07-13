@@ -1,4 +1,9 @@
 <?php require "header.php"; ?>
+	<script>
+		$(document).ready(function() {
+			$("#datepicker").datepicker();
+		});
+	</script>
 <form action="registration.php" method="post">
 	<fieldset>
 		<!-- User ID --> <input type="hidden" name="user_id" value="">
