@@ -48,6 +48,8 @@ if ($action == 'dbConnectInfo')
 	$configFile = fopen('../inc/config.php', 'w');
 
 	fwrite($configFile, $configText);
+
+	echo '<a href="index.php?action=createTables">Continue</a>';
 }
 elseif ($action == 'createTables')
 {
@@ -55,7 +57,12 @@ elseif ($action == 'createTables')
 				(
 					id int(250) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 					username varchar(255),
-					email varchar(255)
+					email varchar(255),
+					gid int(10),
+					age date(255),
+					fname varchar(255),
+					lname varchar(255),
+					pass char(32)
 				);";
 	// More rows & types need changing
 	
@@ -63,12 +70,17 @@ elseif ($action == 'createTables')
 
 	if ($result == True)
 	{
-		echo 'Yay! It worked';
+		echo 'Yay! It worked' .
+		'<a href="index.php?action=addUser">Continue</a>';
 	}
 	else
 	{
 		echo 'Noooo, it didn\'t work! :( More work for me';
 	}
+}
+elseif ($action == 'addUser')
+{
+	echo 'Add User';	
 }
 else
 { ?>
