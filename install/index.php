@@ -53,13 +53,14 @@ if ($action == 'dbConnectInfo')
 }
 elseif ($action == 'createTables')
 {
-	$installQuery = "CREATE TABLE users
+	$tablePrefix = DB_PREFIX;
+	$installQuery = "CREATE TABLE " . $tablePrefix . "users
 				(
 					id int(250) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 					username varchar(255),
 					email varchar(255),
 					gid int(10),
-					age date(255),
+					age date,
 					fname varchar(255),
 					lname varchar(255),
 					pass char(32)
@@ -76,11 +77,28 @@ elseif ($action == 'createTables')
 	else
 	{
 		echo 'Noooo, it didn\'t work! :( More work for me';
+		echo $installQuery;
 	}
 }
 elseif ($action == 'addUser')
 {
-	echo 'Add User';	
+	?>
+	<form action="index.php?action=createAdmin" method="post">
+		<label for="username">Username: </label><input type="text" name="username" id="username" required></input>
+		<br /><label for="password">Password: </label><input type="password" name="password" id="password" required></input>
+		<br /><label for="email">Email: </label><input type="email" name="email" id="email" required></input>
+		<br /><label for="dob">Date of Birth: </label><input type="date" name="dob" id="dob" required</form></input>
+		<br /><input type="submit" value="Submit"></input>
+	</form>
+	<?php
+}
+elseif ($action == 'createAdmin')
+{
+	$username = $_POST['username'];
+	$email = $_POST['email'];
+	$dob = $_POST['dob'];
+
+	// Password etc.
 }
 else
 { ?>
