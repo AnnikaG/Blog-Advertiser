@@ -63,7 +63,8 @@ elseif ($action == 'createTables')
 					age date,
 					fname varchar(255),
 					lname varchar(255),
-					pass char(32)
+					pass char(32),
+					dunno char(32)
 				);";
 	// More rows & types need changing
 	
@@ -88,17 +89,17 @@ elseif ($action == 'addUser')
 			$("#datepicker").datepicker();
 		});
 	</script>
-<form action="registration.php" method="post">
+<form action="index.php?action=createAdmin" method="post">
 	<fieldset>
 		<!-- User ID --> <input type="hidden" name="user_id" value="">
-		<!-- Full Name --> <label for="full_name">Full Name</label> <input type="text" name="full_name">
+		<!-- First Name --> <label for="first_name">First Name</label> <input type="text" name="first_name">
+		<!-- Last Name --> <label for="last_name">Last Name</label> <input type="text" name="last_name">
 		<!-- Username --> <label for="user">Username</label> <input type="text" name="user">
-		<!-- D.O.B --> <label for="dob">Date of Birth</label> <input id="datepicker">
+		<!-- D.O.B --> <label for="dob">Date of Birth</label> <input id="datepicker" name="dob">
 		<!-- E-mail --> <label for="email">E-mail</label> <input type="text" name="email">
 		<!-- E-mail Confirm --> <label for="email_confirm">Confirm E-mail</label> <input type="text" name="email_confirm">
 		<!-- Password --> <label for="password">Password <input type="password" name="password">
 		<!-- Password Confirm --> <label for="password_confirm">Confirm Password</label> <input type="password" name="password_confirm">
-		<!-- Captcha --><label for="captcha">Captcha</label><input type="text" name="captcha">
 		<!-- Submit --><input type="submit" name="submit" value="Register">
 		<!-- Reset --><input type="reset" name="reset" value="Reset Fields">
 	</fieldset>
@@ -107,11 +108,37 @@ elseif ($action == 'addUser')
 }
 elseif ($action == 'createAdmin')
 {
-	$username = $_POST['username'];
+	$tablePrefix = DB_PREFIX;
+	$username = $_POST['user'];
 	$email = $_POST['email'];
 	$dob = $_POST['dob'];
+	$fname = $_POST['first_name'];
+	$lname = $_POST['last_name'];
+	$salt = mcrypt_create_iv(32);
+	$password = md5($_POST['password'] . md5($salt));
 
-	// Password etc.
+	$query = "INSERT INTO `" . $tablePrefix . "users` (`username`, `email`, `gid`, `age`, `fname`, `lname`, `dunno`, `pass`)
+	VALUES ('$username', '$email', '1', '$dob', '$fname', '$lname', '$salt', '$password')";
+
+	echo $query;
+
+	$result = mysql_query($query);
+
+	if ($result == True)
+	{
+		echo 'It worked!';
+	} 
+	else
+	{
+		echo 'It failed!';
+	}
+}
+elseif ($action == 'checkPass')
+{
+	$query = mysql_query("SELECT `dunno`, `pass` FROM " . DB_PREFIX . "users WHERE `id` = 2");
+	$result = mysql_fetch_array($query, MYSQL_ASSOC);
+	echo $result['dunno'];
+
 }
 else
 { ?>
