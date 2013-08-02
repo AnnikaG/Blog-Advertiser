@@ -115,10 +115,11 @@ elseif ($action == 'createAdmin')
 	$fname = $_POST['first_name'];
 	$lname = $_POST['last_name'];
 	$salt = mcrypt_create_iv(32);
-	$password = md5($_POST['password'] . md5($salt));
+	$saltRemoved = str_replace("'", "", $salt);
+	$password = md5($_POST['password'] . md5($saltRemoved));
 
 	$query = "INSERT INTO `" . $tablePrefix . "users` (`username`, `email`, `gid`, `age`, `fname`, `lname`, `dunno`, `pass`)
-	VALUES ('$username', '$email', '1', '$dob', '$fname', '$lname', '$salt', '$password')";
+	VALUES ('$username', '$email', '1', '$dob', '$fname', '$lname', '$saltRemoved', '$password')";
 
 	echo $query;
 
@@ -126,7 +127,7 @@ elseif ($action == 'createAdmin')
 
 	if ($result == True)
 	{
-		echo 'It worked!';
+		echo 'It worked!<br /><a href="index.php?action=settings">Continue</a>';
 	} 
 	else
 	{
@@ -135,10 +136,19 @@ elseif ($action == 'createAdmin')
 }
 elseif ($action == 'checkPass')
 {
-	$query = mysql_query("SELECT `dunno`, `pass` FROM " . DB_PREFIX . "users WHERE `id` = 2");
+	$_SESSION['uid'] = 1;
+	$userId = $_SESSION['uid'];
+	$query = mysql_query("SELECT `dunno`, `pass` FROM " . DB_PREFIX . "users WHERE `id` = '$userId'");
 	$result = mysql_fetch_array($query, MYSQL_ASSOC);
-	echo $result['dunno'];
+	echo md5('password' . md5($result['dunno']));
 
+}
+elseif ($action == 'settings')
+{
+	?>
+	<form action="index.php?action=insertSettings" method="post">
+		<label for="supportEmail">Support Email: </label><input type="text" name="supportEmail" id="supportEmail" required></input>
+		<label for=""></label><!--- What else should we add? -->
 }
 else
 { ?>
@@ -152,7 +162,7 @@ else
 		<br /><label for="tableprefix">Table Prefix: </label><input type="text" name="tableprefix" id="tableprefix" required></input>
 		<br /><input type="submit" value="Submit"></input>
 	</form>
-<?php echo DB_PREFIX;
+<?php
 
 }
 

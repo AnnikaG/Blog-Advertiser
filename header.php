@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	require 'inc/config.php';
 	require 'inc/db.php';
 ?>
