@@ -1,0 +1,372 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"paddin",
+				"padding-bottom"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"border-b",
+				"border-bottom-style"
+			],
+			[
+				"mysql_s",
+				"mysql_select_db"
+			],
+			[
+				"defin",
+				"defined"
+			],
+			[
+				"config",
+				"configText"
+			],
+			[
+				"confi",
+				"configFile"
+			],
+			[
+				"db",
+				"dbpass"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "install/index.php",
+			"settings":
+			{
+				"buffer_size": 4921,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "inc/config.php",
+			"settings":
+			{
+				"buffer_size": 328,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "inc/db.php",
+			"settings":
+			{
+				"buffer_size": 285,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/wamp/www/MyBB/showteam.php",
+		"/C/wamp/www/on/README.html",
+		"/C/wamp/www/Blog-Advertiser/inc/config.php",
+		"/C/wamp/www/Blog-Advertiser/header.php",
+		"/C/Users/Matthew/Documents/UZR Hosting/Shoutbox Source/shout.php",
+		"/C/Users/Matthew/AppData/Local/Temp/fz3temp-1/website_why.tpl",
+		"/C/Users/Matthew/AppData/Local/Temp/fz3temp-1/affiliates-program.php",
+		"/C/Users/Matthew/AppData/Local/Temp/fz3temp-1/aff.php",
+		"/C/Users/Matthew/AppData/Local/Temp/fz3temp-1/about.php",
+		"/C/Users/Matthew/AppData/Local/Temp/fz3temp-1/clientareafunctions.php",
+		"/C/wamp/www/mw/index.php",
+		"/C/wamp/www/mw/LocalSettings.php",
+		"/C/Users/Matthew/Downloads/LocalSettings.php",
+		"/C/Users/Matthew/Documents/UZR Hosting/humanresources/humanresources.php",
+		"/C/wamp/www/Blog-Advertiser/inc/config.ph",
+		"/C/Users/Matthew/Desktop/Websites/ICT Website/HTML/index.html",
+		"/C/Users/Matthew/Desktop/Websites/ICT Website/HTML/contact.html",
+		"/C/wamp/www/Blog-Advertiser/index.php",
+		"/C/wamp/www/Blog-Advertiser/login.php",
+		"/C/wamp/www/Blog-Advertiser/inc/db.php",
+		"/C/Users/Matthew/Downloads/admin.php",
+		"/C/wamp/www/Blog-Advertiser/install/index.php",
+		"/C/wamp/www/Blog-Advertiser/dbConnectTest.php",
+		"/C/wamp/www/Blog-Advertiser/register.php",
+		"/C/Users/Matthew/Downloads/index.php",
+		"/C/Users/Matthew/Downloads/impressivcard-v1.1/impressivcard-v1.1/index.php",
+		"/C/wamp/www/mybb-stable/install/index.php",
+		"/C/wamp/www/Blog-Advertiser/includes/config.php",
+		"/C/wamp/www/Blog-Advertiser/includes/dbconnect.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"userId",
+			"p-personal",
+			"navigation",
+			"mw-head",
+			"background",
+			"content",
+			"p-personal",
+			"personal",
+			"body",
+			"mediawiki",
+			"toolbox",
+			"portal",
+			"+",
+			"+\n",
+			">';\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "install/index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4921,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4149,
+								4149
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1890.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "inc/config.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 328,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "inc/db.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 285,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"project": "Sublime Project.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -144,11 +144,11 @@ elseif ($action == 'checkPass')
 
 }
 elseif ($action == 'settings')
-{
-	?>
+{ ?>
 	<form action="index.php?action=insertSettings" method="post">
 		<label for="supportEmail">Support Email: </label><input type="text" name="supportEmail" id="supportEmail" required></input>
 		<label for=""></label><!--- What else should we add? -->
+<?php
 }
 else
 { ?>
