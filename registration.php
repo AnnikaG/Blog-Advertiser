@@ -3,7 +3,7 @@ require 'header.php';
 
 $fname = $_POST['fname'];
 $lname = $_POST['lname'];
-$username = $_POST['user'];
+$username = htmlentities($_POST['user']);
 $dob = $_POST['dob'];
 
 // Email

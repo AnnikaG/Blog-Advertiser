@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"user",
+				"username"
+			],
+			[
+				"FI",
+				"_FILES"
+			],
+			[
+				"pas",
+				"password_confirm"
+			],
+			[
+				"sal",
+				"saltRemoved"
+			],
+			[
 				"str_re",
 				"str_replace"
 			],
@@ -47,7 +63,39 @@
 			"file": "install/index.php",
 			"settings":
 			{
-				"buffer_size": 4921,
+				"buffer_size": 4926,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "register.php",
+			"settings":
+			{
+				"buffer_size": 1361,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "registration.php",
+			"settings":
+			{
+				"buffer_size": 1794,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "littleUpdate.php",
+			"settings":
+			{
+				"buffer_size": 232,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "header.php",
+			"settings":
+			{
+				"buffer_size": 984,
 				"line_ending": "Windows"
 			}
 		},
@@ -64,13 +112,6 @@
 			"settings":
 			{
 				"buffer_size": 285,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"settings":
-			{
-				"buffer_size": 0,
 				"line_ending": "Windows"
 			}
 		}
@@ -181,7 +222,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -190,15 +231,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4921,
+						"buffer_size": 4926,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4149,
-								4149
+								2822,
+								2822
 							]
 						],
 						"settings":
@@ -207,13 +248,123 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1890.0,
+						"translation.y": 1350.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+					"file": "register.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1361,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1361,
+								1361
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "registration.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1794,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1630,
+								1630
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 540.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "littleUpdate.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 232,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								229,
+								229
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "header.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 984,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
 					"file": "inc/config.php",
 					"semi_transient": false,
 					"settings":
@@ -241,7 +392,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 6,
 					"file": "inc/db.php",
 					"semi_transient": false,
 					"settings":
@@ -260,32 +411,6 @@
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
