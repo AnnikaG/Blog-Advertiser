@@ -6,6 +6,16 @@ $lname = $_POST['lname'];
 $username = htmlentities($_POST['user']);
 $dob = $_POST['dob'];
 
+// Username
+
+$query = "SELECT id FROM " . DB_PREFIX . "users WHERE username = '$username'";
+$result = mysql_fetch_array(mysql_query($query));
+
+if ($result != False)
+{
+	die("That username is already in use!");
+}
+
 // Email
 if ($_POST['email'] === $_POST['email_confirm'])
 {
@@ -14,6 +24,14 @@ if ($_POST['email'] === $_POST['email_confirm'])
 else
 {
 	die("The emails did not match");
+}
+
+$query = "SELECT id FROM " . DB_PREFIX . "users WHERE email = '$email'";
+$result = mysql_fetch_array(mysql_query($query));
+
+if ($result != False)
+{
+	die("That email is already in use!");
 }
 
 // Password
