@@ -13,7 +13,7 @@
 	}
 	if (!defined('DB_NAME'))
 	{
-		define('DB_NAME', 'bloga');
+		define('DB_NAME', 'blogpdo');
 	}
 	if (!defined('DB_PREFIX'))
 	{

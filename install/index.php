@@ -53,7 +53,8 @@ if ($action == 'dbConnectInfo')
 }
 elseif ($action == 'createTables')
 {
-	$installQuery = "CREATE TABLE " . DB_PREFIX . "users
+	// Prepare the query for executing. Not really needed here, but used anyway
+	$installQuery = $database->prepare("CREATE TABLE " . DB_PREFIX . "users
 				(
 					id int(250) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 					username varchar(255),
@@ -65,10 +66,11 @@ elseif ($action == 'createTables')
 					pass char(32),
 					dunno char(32),
 					avatar varchar(155)
-				);";
+				);");
 	// More rows & types need changing
 	
-	$result = mysql_query($installQuery);
+	// Execute $installQuery
+	$result = $installQuery->execute();
 
 	if ($result == True)
 	{
@@ -108,7 +110,6 @@ elseif ($action == 'addUser')
 }
 elseif ($action == 'createAdmin')
 {
-	$tablePrefix = DB_PREFIX;
 	$username = $_POST['user'];
 	$email = $_POST['email'];
 	$dob = $_POST['dob'];
@@ -117,31 +118,34 @@ elseif ($action == 'createAdmin')
 	$salt = mcrypt_create_iv(32);
 	$saltRemoved = str_replace("'", "", $salt);
 	$password = md5($_POST['password'] . md5($saltRemoved));
+	$tableName = DB_PREFIX . "users";
 
-	$query = "INSERT INTO `" . $tablePrefix . "users` (`username`, `email`, `gid`, `age`, `fname`, `lname`, `dunno`, `pass`)
-	VALUES ('$username', '$email', '1', '$dob', '$fname', '$lname', '$saltRemoved', '$password')";
+	// Prepare the query - :something are simply placeholders. This stops SQL Injections as data is never placed in the query itself
+	$query = $database->prepare("INSERT INTO " . $tableName . " (`username`, `email`, `gid`, `age`, `fname`, `lname`, `dunno`, `pass`)
+	VALUES (:username, :email, '1', :dob, :fname, :lname, :salt, :password)");
 
-	echo $query;
+	// Execute the query with the data
+	$query->execute(array(
+						':username' => $username,
+						':email' => $email,
+						':dob' => $dob,
+						':fname' => $fname,
+						':lname' => $lname,
+						':password' => $password,
+						':salt' => $saltRemoved));
 
-	$result = mysql_query($query);
-
-	if ($result == True)
+	if ($query->rowCount() == 1)
 	{
 		echo 'It worked!<br /><a href="index.php?action=settings">Continue</a>';
 	} 
 	else
 	{
 		echo 'It failed!';
-	}
+	} 
 }
 elseif ($action == 'checkPass')
 {
-	$_SESSION['uid'] = 1;
-	$userId = $_SESSION['uid'];
-	$query = mysql_query("SELECT `dunno`, `pass` FROM " . DB_PREFIX . "users WHERE `id` = '$userId'");
-	$result = mysql_fetch_array($query, MYSQL_ASSOC);
-	echo md5('password' . md5($result['dunno']));
-
+	// Not needed anymore
 }
 elseif ($action == 'settings')
 { ?>

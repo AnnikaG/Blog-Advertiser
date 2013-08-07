@@ -1,6 +1,7 @@
 <?php
 require 'header.php';
 
+$tableName = DB_PREFIX . "users";
 $fname = $_POST['fname'];
 $lname = $_POST['lname'];
 $username = htmlentities($_POST['user']);
@@ -8,8 +9,12 @@ $dob = $_POST['dob'];
 
 // Username
 
-$query = "SELECT id FROM " . DB_PREFIX . "users WHERE username = '$username'";
-$result = mysql_fetch_array(mysql_query($query));
+// Prepare the query
+$usernameQuery = $database->prepare("SELECT id FROM " . $tableName . " WHERE username = :username");
+// Execute the query with the data
+$usernameQuery->execute(array(':username' => $username));
+// Get all the data from the query
+$result = $usernameQuery->fetchAll();
 
 if ($result != False)
 {
@@ -26,8 +31,10 @@ else
 	die("The emails did not match");
 }
 
-$query = "SELECT id FROM " . DB_PREFIX . "users WHERE email = '$email'";
-$result = mysql_fetch_array(mysql_query($query));
+// Do the same here
+$emailQuery = $database->prepare("SELECT id FROM " . DB_PREFIX . "users WHERE email = :email");
+$emailQuery->execute(array(':email' => $email));
+$result = $emailQuery->fetchAll();
 
 if ($result != False)
 {
@@ -50,6 +57,7 @@ else
 $allowedExtensions = array("jpeg", "jpg", "png", "gif");
 $tempExtenstion = explode(".", $_FILES['avatar']['name']);
 $extension = end($tempExtenstion);
+$fileName = NULL;
 
 if ((($_FILES['avatar']['type'] == 'image/jpeg')
 	|| ($_FILES['avatar']['type'] == 'image/jpg')
@@ -61,7 +69,7 @@ if ((($_FILES['avatar']['type'] == 'image/jpeg')
 {
 	if ($_FILES['avatar']['error'] > 0)
 	{
-		die('An error occured: ' . $_FILES['avatar']['error']);
+		echo 'An error occured: ' . $_FILES['avatar']['error'];
 	}
 	else
 	{
@@ -76,17 +84,32 @@ else
 }
 
 
+try
+{
+	$query = $database->prepare("INSERT INTO " . $tableName . " (`username`, `email`, `gid`, `age`, `fname`, `lname`, `dunno`, `pass`, `avatar`)
+	VALUES (:username, :email, '1', :dob, :fname, :lname, :salt, :password, :fileName)");
 
-$query = "INSERT INTO `" . DB_PREFIX . "users` (`username`, `email`, `gid`, `age`, `fname`, `lname`, `dunno`, `pass`, `avatar`)
-VALUES ('$username', '$email', '3', '$dob', '$fname', '$lname', '$saltRemoved', '$password', '$fileName')";
+	// Execute the query with the data
+	$query->execute(array(
+						':username' => $username,
+						':email' => $email,
+						':dob' => $dob,
+						':fname' => $fname,
+						':lname' => $lname,
+						':password' => $password,
+						':salt' => $saltRemoved,
+						':fileName' => $fileName));
+}
+catch(PDOException $e){
+	echo $e;
+}
 
-$result = mysql_query($query);
-
-if ($result == True)
+if ($query->rowCount() == 1)
 {
 	echo "You have registered successfullly!";
 }
 else
 {
 	echo "There was an error registering the user!";
+	echo $username . '<br />' . $email;
 }

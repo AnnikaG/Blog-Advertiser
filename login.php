@@ -12,26 +12,28 @@ if (isset($_GET))
 <?php
 if ($action == 'submit')
 {
-	$email = htmlentities($_POST['email']);
+	$email = $_POST['email'];
 
-	$query = "SELECT `pass`, `dunno` FROM " . DB_PREFIX . "users WHERE email = '$email'";
-	$result = mysql_query($query);
+	$query = $database->prepare("SELECT `pass`, `dunno` FROM " . DB_PREFIX . "users WHERE email = :email");
+	$query->execute(array(':email' => $email));
+	$result = $query->rowCount();
 
-	if ($result == False)
+	if ($result == 0)
 	{
 		die("Your email address could not be found!");
 	}
 	else
 	{
-		$info = mysql_fetch_array($result, MYSQL_ASSOC);
+		$info =$query->fetch(PDO::FETCH_ASSOC);
 	}
 
 	$password = md5($_POST['password'] . md5($info['dunno']));
 
 	if ($password == $info['pass'])
 	{
-		$query = "SELECT id, username, email, gid, age, fname, lname, avatar FROM " . DB_PREFIX . "users WHERE email = '$email'";
-		$_SESSION['user'] = mysql_fetch_array(mysql_query($query), MYSQL_ASSOC);
+		$passwordQuery = $database->prepare("SELECT id, username, email, gid, age, fname, lname, avatar FROM " . DB_PREFIX . "users WHERE email = :email");
+		$passwordQuery->execute(array(':email' => $email));
+		$_SESSION['user'] = $passwordQuery->fetch(PDO::FETCH_ASSOC);
 		echo "You have successfully logged in, " . $_SESSION['user']['username'];
 		echo "<a href=\"login.php?action=logOut\">Log Out</a>";
 	}
