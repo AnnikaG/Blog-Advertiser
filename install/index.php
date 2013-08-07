@@ -53,8 +53,7 @@ if ($action == 'dbConnectInfo')
 }
 elseif ($action == 'createTables')
 {
-	$tablePrefix = DB_PREFIX;
-	$installQuery = "CREATE TABLE " . $tablePrefix . "users
+	$installQuery = "CREATE TABLE " . DB_PREFIX . "users
 				(
 					id int(250) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 					username varchar(255),
@@ -64,7 +63,8 @@ elseif ($action == 'createTables')
 					fname varchar(255),
 					lname varchar(255),
 					pass char(32),
-					dunno char(32)
+					dunno char(32),
+					avatar varchar(155)
 				);";
 	// More rows & types need changing
 	

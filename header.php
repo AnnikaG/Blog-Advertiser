@@ -31,4 +31,20 @@
 	
 </head>
 
+<div id="headerBar">
+<?php
+if (is_null($_SESSION['user']))
+{ ?>
+Welcome, Guest. Why not <a href="login.php">Login</a> or <a href="register.php">Register</a>?
+
+<?php
+}
+else
+{ ?>
+Welcome, <?php echo $_SESSION['user']['username']; ?> <a href="dashboard.php">Dashboard</a>
+
+<?php
+}
+?>
+</div>
 <div id="toTop">^ Back to Top</div>

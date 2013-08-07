@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"print",
+				"print_r"
+			],
+			[
 				"session_d",
 				"session_destroy"
 			],
@@ -91,7 +95,7 @@
 			"file": "registration.php",
 			"settings":
 			{
-				"buffer_size": 1808,
+				"buffer_size": 2210,
 				"line_ending": "Windows"
 			}
 		},
@@ -123,7 +127,15 @@
 			"file": "header.php",
 			"settings":
 			{
-				"buffer_size": 984,
+				"buffer_size": 1272,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "dashboard.php",
+			"settings":
+			{
+				"buffer_size": 117,
 				"line_ending": "Windows"
 			}
 		}
@@ -234,7 +246,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 7,
 			"sheets":
 			[
 				{
@@ -299,15 +311,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1808,
+						"buffer_size": 2210,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								121,
-								121
+								693,
+								693
 							]
 						],
 						"settings":
@@ -315,7 +327,7 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 675.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -342,7 +354,7 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 270.0,
+						"translation.y": 255.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -407,21 +419,48 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 984,
+						"buffer_size": 1272,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1198,
+								1198
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "dashboard.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 117,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								27,
+								27
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
