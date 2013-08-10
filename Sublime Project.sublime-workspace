@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"pass",
+				"passwordQuery"
+			],
+			[
+				"pas",
+				"passwordQuery"
+			],
+			[
+				"ema",
+				"emailQuery"
+			],
+			[
+				"data",
+				"database"
+			],
+			[
+				"user",
+				"usernameQuery"
+			],
+			[
+				"table",
+				"tableprefix"
+			],
+			[
 				"print",
 				"print_r"
 			],
@@ -20,16 +44,8 @@
 				"htmlentities"
 			],
 			[
-				"user",
-				"username"
-			],
-			[
 				"FI",
 				"_FILES"
-			],
-			[
-				"pas",
-				"password_confirm"
 			],
 			[
 				"sal",
@@ -79,7 +95,31 @@
 			"file": "install/index.php",
 			"settings":
 			{
-				"buffer_size": 4926,
+				"buffer_size": 5140,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "registration.php",
+			"settings":
+			{
+				"buffer_size": 2841,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "inc/db.php",
+			"settings":
+			{
+				"buffer_size": 844,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "inc/config.php",
+			"settings":
+			{
+				"buffer_size": 330,
 				"line_ending": "Windows"
 			}
 		},
@@ -92,26 +132,10 @@
 			}
 		},
 		{
-			"file": "registration.php",
-			"settings":
-			{
-				"buffer_size": 2210,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "login.php",
 			"settings":
 			{
-				"buffer_size": 1341,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "checkUser.php",
-			"settings":
-			{
-				"buffer_size": 163,
+				"buffer_size": 1447,
 				"line_ending": "Windows"
 			}
 		},
@@ -127,7 +151,7 @@
 			"file": "header.php",
 			"settings":
 			{
-				"buffer_size": 1272,
+				"buffer_size": 1278,
 				"line_ending": "Windows"
 			}
 		},
@@ -135,7 +159,7 @@
 			"file": "dashboard.php",
 			"settings":
 			{
-				"buffer_size": 117,
+				"buffer_size": 178,
 				"line_ending": "Windows"
 			}
 		}
@@ -167,6 +191,9 @@
 	},
 	"file_history":
 	[
+		"/C/wamp/www/Blog-Advertiser/inc/user.php",
+		"/C/wamp/www/usl/core/functions/user.php",
+		"/C/wamp/www/Blog-Advertiser/checkUser.php",
 		"/C/wamp/www/Blog-Advertiser/inc/db.php",
 		"/C/wamp/www/Blog-Advertiser/inc/config.php",
 		"/C/wamp/www/MyBB/showteam.php",
@@ -246,7 +273,7 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 8,
 			"sheets":
 			[
 				{
@@ -255,15 +282,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4926,
+						"buffer_size": 5140,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								127,
-								78
+								1680,
+								1680
 							]
 						],
 						"settings":
@@ -272,13 +299,95 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1665.0,
+						"translation.y": 720.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+					"file": "registration.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2841,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2841,
+								2841
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1485.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "inc/db.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 844,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								487,
+								487
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "inc/config.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 330,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
 					"file": "register.php",
 					"semi_transient": false,
 					"settings":
@@ -306,47 +415,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "registration.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2210,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								693,
-								693
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 675.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
+					"buffer": 5,
 					"file": "login.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1341,
+						"buffer_size": 1447,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								961,
-								961
+								1447,
+								1447
 							]
 						],
 						"settings":
@@ -354,40 +436,13 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 255.0,
+						"translation.y": 135.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "checkUser.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 163,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								158,
-								158
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
+					"buffer": 6,
 					"file": "littleUpdate.php",
 					"semi_transient": false,
 					"settings":
@@ -399,8 +454,8 @@
 						"selection":
 						[
 							[
-								229,
-								229
+								78,
+								97
 							]
 						],
 						"settings":
@@ -414,20 +469,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": "header.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1272,
+						"buffer_size": 1278,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1198,
-								1198
+								1019,
+								1019
 							]
 						],
 						"settings":
@@ -436,26 +491,26 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 180.0,
+						"translation.y": 90.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 8,
 					"file": "dashboard.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 117,
+						"buffer_size": 178,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								27,
-								27
+								176,
+								176
 							]
 						],
 						"settings":

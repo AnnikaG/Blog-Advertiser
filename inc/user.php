@@ -1,6 +1,4 @@
 <?php
-require 'header.php';
-
 $tableName = DB_PREFIX . "users";
 $fname = $_POST['fname'];
 $lname = $_POST['lname'];
@@ -113,5 +111,4 @@ else
 	echo "There was an error registering the user!";
 	echo $username . '<br />' . $email;
 }
-
 ?>

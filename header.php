@@ -35,7 +35,7 @@
 <?php
 if (is_null($_SESSION['user']))
 { ?>
-Welcome, Guest. Why not <a href="login.php">Login</a> or <a href="register.php">Register</a>?
+<br />Welcome, Guest. Why not <a href="login.php">Login</a> or <a href="register.php">Register</a>?
 
 <?php
 }

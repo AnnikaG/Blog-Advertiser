@@ -80,7 +80,6 @@ elseif ($action == 'createTables')
 	else
 	{
 		echo 'Noooo, it didn\'t work! :( More work for me';
-		echo $installQuery;
 	}
 }
 elseif ($action == 'addUser')
